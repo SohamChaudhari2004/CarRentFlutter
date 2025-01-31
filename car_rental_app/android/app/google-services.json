@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "280801840179",
+    "project_id": "carrentalappflutter",
+    "storage_bucket": "carrentalappflutter.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280801840179:android:39a4199f169aec1575e746",
+        "android_client_info": {
+          "package_name": "com.example.car_rental_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1L-IfDAFAWdIHHUZvHT20QstlKsCi_Ys"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
