@@ -1,6 +1,8 @@
 // import 'dart:ffi';
 import 'package:car_rental_app/data/models/car.dart';
+import 'package:car_rental_app/presentation/pages/car_details_page.dart';
 import 'package:flutter/material.dart';
+
 
 class CarCard extends StatefulWidget {
   final Car car;
@@ -26,14 +28,18 @@ class _CarCardState extends State<CarCard> {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedOpacity(
-      duration: Duration(milliseconds: 800),
-      opacity: _opacity,
+    return GestureDetector(
+      onTap: (){
+        Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => CardDetailsPage(car: widget.car))
+        );
+      },
       child: Container(
         margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
         padding: EdgeInsets.all(20),
         decoration: BoxDecoration(
-          color: Color.fromARGB(255, 225, 225, 225),
+          color: Color(0xffF3F3F3),
           borderRadius: BorderRadius.circular(20),
           boxShadow: [
             BoxShadow(
@@ -73,9 +79,13 @@ class _CarCardState extends State<CarCard> {
                       ],
                     ),
                   ],
-                )
+                ),
+                Text(
+                    '\$${widget.car.pricePerHour.toStringAsFixed(2)}/h',
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
               ],
-            )
+            ),
           ],
         ),
       ),

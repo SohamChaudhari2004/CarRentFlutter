@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 65, 56, 80)),
         useMaterial3: true,
       ),
-      home: CarlistScreen(),
+      home: OnboardingPage(),
     );
   }
 }
