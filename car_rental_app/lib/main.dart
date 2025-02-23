@@ -1,9 +1,12 @@
 import 'package:car_rental_app/firebase_options.dart';
+import 'package:car_rental_app/presentation/pages/auth_screen.dart';
 import 'package:car_rental_app/presentation/pages/car_list_screen.dart';
 import 'package:car_rental_app/presentation/pages/onboarding_page.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +26,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 65, 56, 80)),
         useMaterial3: true,
       ),
+      // home: FirebaseAuth.instance.currentUser == null ? AuthScreen() : CarlistScreen(),
       home: OnboardingPage(),
-    );
+    );  
   }
 }

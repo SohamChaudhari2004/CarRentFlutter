@@ -1,6 +1,8 @@
 import 'package:car_rental_app/data/models/car.dart';
+import 'package:car_rental_app/presentation/pages/auth_screen.dart';
 import 'package:car_rental_app/presentation/widgets/car_card.dart';
 import 'package:flutter/material.dart';
+// import 'package:firebase_auth/firebase_auth.dart';
 
 class CarlistScreen extends StatefulWidget {
   @override
@@ -29,7 +31,19 @@ class _CarlistScreenState extends State<CarlistScreen> {
       appBar: AppBar(
         title: Text("Choose Your Car"),
         backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
+        foregroundColor: Colors.black,  
+  //       actions: [
+  //         IconButton(
+  //   icon: Icon(Icons.logout, color: Colors.black),
+  //   onPressed: () async {
+  //     await FirebaseAuth.instance.signOut();
+  //     Navigator.pushReplacement(
+  //       context,
+  //       MaterialPageRoute(builder: (context) => AuthScreen()),
+  //     );
+  //   },
+  // ),
+  //       ],
       ),
       body: ListView.builder(
         controller: _scrollController,
